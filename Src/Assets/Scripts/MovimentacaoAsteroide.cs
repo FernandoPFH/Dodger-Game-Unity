@@ -12,9 +12,7 @@ public class MovimentacaoAsteroide : MonoBehaviour
     {
         var anguloDeDirecao = Random.Range(-anguloMaximoDeVariacao,anguloMaximoDeVariacao);
 
-        Debug.Log(anguloDeDirecao);
-
-        this.transform.rotation = Quaternion.Euler(new Vector3(0,0,-90 + anguloDeDirecao));
+        this.transform.rotation = Quaternion.Euler(new Vector3(0,0,this.transform.rotation.z + -90 + anguloDeDirecao));
 
         this.GetComponent<Rigidbody>().AddForce(transform.right * 50);
     }
