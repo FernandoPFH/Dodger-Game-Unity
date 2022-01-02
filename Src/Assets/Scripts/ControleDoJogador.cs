@@ -44,13 +44,13 @@ public class ControleDoJogador : MonoBehaviour
     {
         // Se O Botão "W" Tiver Sido Apertado, É Adicionado Uma Força Para Cima
         if (this.deveIrParaFrente) {
-            rigidBody.AddRelativeForce(transform.up * this.intensidadeDoImpulso);
+            rigidBody.AddForce(transform.up * this.intensidadeDoImpulso);
 
             this.deveIrParaFrente = false;
 
         // Se O Botão "S" Tiver Sido Apertado, É Adicionado Uma Força Para Baixo
         } else if (this.deveIrParaTras) {
-            rigidBody.AddRelativeForce((-transform.up) * this.intensidadeDoImpulso);
+            rigidBody.AddForce((-transform.up) * this.intensidadeDoImpulso);
 
             this.deveIrParaTras = false;
         }
