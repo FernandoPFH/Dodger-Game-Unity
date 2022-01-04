@@ -9,6 +9,9 @@ public class ControleDoJogador : MonoBehaviour
     public float intensidadeDoImpulso = 6f;
     public float velocidadeMaxima = 5f;
     public Rigidbody rigidBody;
+    public ParticleSystem fogoEsquerdo;
+    public ParticleSystem fogoCentral;
+    public ParticleSystem fogoDireito;
 
     // Variáveis Acessiveis De Dentro Da Classe 
     private bool deveIrParaFrente;
@@ -51,8 +54,13 @@ public class ControleDoJogador : MonoBehaviour
 
             this.deveIrParaFrente = false;
 
+            fogoCentral.Play(true);
+        } else {
+            fogoCentral.Stop(true);
+        }
+        
         // Se O Botão "S" Tiver Sido Apertado, É Adicionado Uma Força Para Baixo
-        } else if (this.deveIrParaTras) {
+        if (this.deveIrParaTras) {
             rigidBody.AddForce((-transform.up) * this.intensidadeDoImpulso);
 
             this.deveIrParaTras = false;
@@ -60,16 +68,27 @@ public class ControleDoJogador : MonoBehaviour
 
         // Se O Botão "A" Tiver Sido Apertado, É Adicionado Uma Força De Torque Para O Sentido AntiHorario
         if (this.deveIrGirarSentidoAntiHorario) {
-            rigidBody.AddTorque(-transform.forward);
+            rigidBody.AddTorque(transform.forward);
 
             this.deveIrGirarSentidoAntiHorario = false;
 
+            fogoDireito.Play(true);
+        } else {
+            fogoDireito.Stop(true);
+        }
+        
+        
         // Se O Botão "D" Tiver Sido Apertado, É Adicionado Uma Força De Torque Para O Sentido Horario
-        } else if (this.deveIrGirarSentidoHorario) {
-            rigidBody.AddTorque(transform.forward);
+        if (this.deveIrGirarSentidoHorario) {
+            rigidBody.AddTorque(-transform.forward);
 
             this.deveIrGirarSentidoHorario = false;
+
+            fogoEsquerdo.Play(true);
+        } else {
+            fogoEsquerdo.Stop(true);
         }
+        
 
         // Se A Velocidade Atual Do Objeto For Maior Que A Velocidade Máxima Desejada, Retorna o Valor Para Velocidade Máxima
         if (rigidBody.velocity.magnitude > this.velocidadeMaxima) {
