@@ -54,8 +54,10 @@ public class ControleDoJogador : MonoBehaviour
 
             this.deveIrParaFrente = false;
 
+            // Começa Animação Do Jogo
             fogoCentral.Play(true);
         } else {
+            // Para Animação Do Jogo
             fogoCentral.Stop(true);
         }
         
@@ -72,8 +74,10 @@ public class ControleDoJogador : MonoBehaviour
 
             this.deveIrGirarSentidoAntiHorario = false;
 
+            // Começa Animação Do Jogo
             fogoDireito.Play(true);
         } else {
+            // Para Animação Do Jogo
             fogoDireito.Stop(true);
         }
         
@@ -84,8 +88,10 @@ public class ControleDoJogador : MonoBehaviour
 
             this.deveIrGirarSentidoHorario = false;
 
+            // Começa Animação Do Jogo
             fogoEsquerdo.Play(true);
         } else {
+            // Para Animação Do Jogo
             fogoEsquerdo.Stop(true);
         }
         
