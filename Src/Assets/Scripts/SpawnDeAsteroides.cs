@@ -26,7 +26,7 @@ public class SpawnDeAsteroides : MonoBehaviour
     private async void spawnarAsteroides() {
 
         // Spawna Asteroides Com Um Delay Entre Eles
-        while(true) {
+        while(this != null) {
             var posicaoMax = this.extremidade * this.porcentagemDeEspacoUsado / 100;
 
             // Checa Se O Jogo Não Está Parado
