@@ -28,8 +28,11 @@ public class SpawnDeAsteroides : MonoBehaviour
         // Spawna Asteroides Com Um Delay Entre Eles
         while(true) {
             var posicaoMax = this.extremidade * this.porcentagemDeEspacoUsado / 100;
-            
-            Instantiate(asteroide,new Vector3(Random.Range(-posicaoMax,posicaoMax),this.transform.position.y,this.transform.position.z),Quaternion.identity);
+
+            // Checa Se O Jogo Não Está Parado
+            if (Time.timeScale > 0f) {
+                Instantiate(asteroide,new Vector3(Random.Range(-posicaoMax,posicaoMax),this.transform.position.y,this.transform.position.z),Quaternion.identity);
+            }
         
             await Task.Delay(this.tempoEntreSpawns);
         }

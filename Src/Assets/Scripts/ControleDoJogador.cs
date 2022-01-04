@@ -25,18 +25,21 @@ public class ControleDoJogador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Checa Se Os Botões "W" e "S" Foram Apertados
-        if(Input.GetKey(KeyCode.W)) {
-            this.deveIrParaFrente = true;
-        } else if (Input.GetKey(KeyCode.S)) {
-            this.deveIrParaTras = true;
-        }
+        // Checa Se O Jogo Não Está Parado
+        if (Time.timeScale > 0f) {
+            //Checa Se Os Botões "W" e "S" Foram Apertados
+            if(Input.GetKey(KeyCode.W)) {
+                this.deveIrParaFrente = true;
+            } else if (Input.GetKey(KeyCode.S)) {
+                this.deveIrParaTras = true;
+            }
 
-        //Checa Se Os Botões "A" e "D" Foram Apertados
-        if(Input.GetKey(KeyCode.A)) {
-            this.deveIrGirarSentidoAntiHorario = true;
-        } else if (Input.GetKey(KeyCode.D)) {
-            this.deveIrGirarSentidoHorario = true;
+            //Checa Se Os Botões "A" e "D" Foram Apertados
+            if(Input.GetKey(KeyCode.A)) {
+                this.deveIrGirarSentidoAntiHorario = true;
+            } else if (Input.GetKey(KeyCode.D)) {
+                this.deveIrGirarSentidoHorario = true;
+            }
         }
     }
 
