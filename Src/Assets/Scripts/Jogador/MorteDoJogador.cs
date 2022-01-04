@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MorteDoPlayer : MonoBehaviour
+public class MorteDoJogador : MonoBehaviour
 {
     // Variáveis Acessiveis De Fora Da Classe
     public GameObject menuMorteDoJogador;

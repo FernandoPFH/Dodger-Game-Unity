@@ -19,8 +19,9 @@ public class DestruicaoDosAsteroides : MonoBehaviour
     private async void destruirAsteroide() {
         // Espera Um Tempo
         await Task.Delay(this.tempoDeVida * 1000);
+
         // Destroi O Asteroide
-        if (this != null) {
+        if (this != null && Time.timeScale > 0f) {
             Object.Destroy(this.gameObject);
         }
     }

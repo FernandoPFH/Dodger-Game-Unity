@@ -154,7 +154,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   porcentagemDeEspacoUsado: 70
   tempoEntreSpawns: 2000
-  asteroide: {fileID: 2188190332843321299, guid: d5f50dfec29276a4090a02eece5ad93a, type: 3}
+  asteroidePequeno: {fileID: 2188190332843321299, guid: d5f50dfec29276a4090a02eece5ad93a, type: 3}
+  asteroideMedio: {fileID: 2188190332843321299, guid: 67cac661e5647cc418c184d460f4bbcc, type: 3}
+  asteroideGrande: {fileID: 2188190332843321299, guid: f084dc194a717b440a5c2449151d0623, type: 3}
+  lavaVermelha: {fileID: 2100000, guid: 816eca2bca813da4883bad3b376c4dbc, type: 2}
+  lavaAzul: {fileID: 2100000, guid: e1cac9f87fda27445ac6a54ade344d63, type: 2}
 --- !u!4 &13498326
 Transform:
   m_ObjectHideFlags: 0
@@ -1339,10 +1343,10 @@ RectTransform:
   m_Father: {fileID: 1311572890}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 735.5, y: -366.5}
+  m_SizeDelta: {x: 1471, y: 733}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &930366219
 MonoBehaviour:
