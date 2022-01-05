@@ -44,6 +44,10 @@ public class ControleDoJogador : MonoBehaviour
                 this.deveIrGirarSentidoHorario = true;
             }
         }
+
+        if (Input.GetKey(KeyCode.Escape)) {
+            Application.Quit();
+        }
     }
 
     void FixedUpdate()

@@ -70,6 +70,7 @@ public class SpawnDeAsteroides : MonoBehaviour
                 }
             }
         
+        
             await Task.Delay(this.tempoEntreSpawns);
         }
     }
