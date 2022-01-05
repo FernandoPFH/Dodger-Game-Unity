@@ -28,11 +28,12 @@ public class MorteDoJogador : MonoBehaviour
         // Checa Se A Tag Do Objeto é "Asteroide"
         if (objeto.gameObject.tag == "Asteroide") {
 
-            
             // Para Animação Do Fogo Do Jogador
             fogoEsquerdo.Stop(true,ParticleSystemStopBehavior.StopEmittingAndClear);
             fogoCentral.Stop(true,ParticleSystemStopBehavior.StopEmittingAndClear);
             fogoDireito.Stop(true,ParticleSystemStopBehavior.StopEmittingAndClear);
+
+            fogoDeExplosao.GetComponent<AudioSource>().Play();
 
             // Desaparece Com A Nave 
             foreach (MeshRenderer meshRenderer in this.GetComponentsInChildren<MeshRenderer>())
