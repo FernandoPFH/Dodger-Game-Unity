@@ -29,6 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 4.16, z: 0}
   m_LocalScale: {x: 0.71858, y: 0.71858, z: 0.71858}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2188190333262184071}
   - {fileID: 6768506921090001443}
@@ -87,7 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2188190333262184071}
-  - component: {fileID: 2188190333262184072}
+  - component: {fileID: 2990920728989052553}
   m_Layer: 0
   m_Name: Colisor
   m_TagString: Untagged
@@ -104,24 +105,26 @@ Transform:
   m_GameObject: {fileID: 2188190333262184070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.9242296, y: 2.9242296, z: 2.9242296}
+  m_LocalScale: {x: 1.02, y: 1.02, z: 1.02}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2188190332843321302}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &2188190333262184072
-SphereCollider:
+--- !u!64 &2990920728989052553
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2188190333262184070}
-  m_Material: {fileID: 13400000, guid: b36ab484157b2614c97d24139c5c1080, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: c8e5dbd0279404f47898113147f8f42f, type: 3}
 --- !u!1001 &6768506921089532439
 PrefabInstance:
   m_ObjectHideFlags: 0
