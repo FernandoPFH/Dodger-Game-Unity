@@ -3,6 +3,10 @@
 ![](/Imagens/MenuInicial.PNG)
 Um jogo de nave que desvia de asteroides.
 
+## Link Para Teste
+
+[Clique Aqui](https://fernandopfh.github.io/Dodger-Game-Unity/)
+
 ## Packages Usados:
 - [Asteroids Pack](https://assetstore.unity.com/packages/3d/environments/asteroids-pack-84988)
 - [Flames of the Phoenix](https://assetstore.unity.com/packages/vfx/particles/fire-explosions/flames-of-the-phoenix-46176)
