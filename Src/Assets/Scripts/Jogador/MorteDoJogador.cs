@@ -6,6 +6,7 @@ public class MorteDoJogador : MonoBehaviour
 {
     // Variáveis Acessiveis De Fora Da Classe
     public GameObject menuMorteDoJogador;
+    public ControlarMenu controlarMenu;
     public GameObject fogoDeExplosao;
     public ParticleSystem fogoEsquerdo;
     public ParticleSystem fogoCentral;
@@ -49,6 +50,9 @@ public class MorteDoJogador : MonoBehaviour
 
             // Ativa O Menu De Morte
             menuMorteDoJogador.SetActive(true);
+
+            // Desativa O Menu De Pause
+            controlarMenu.pode_se_pausar = false;
 
             // Para o Jogo
             Time.timeScale = 0f;
